@@ -104,6 +104,19 @@ we sum up all the shares and take mod field to get our number back.
 
 ![](pics/fed7.png)      
 
+**Encrypted deep learning with Pysyft** :   
+
+So, the thing is that there are various security and privacy issues when we train the data , what if the server on which we upload our data to train sees our model parameters and use them for training their own model to outrun us in say any online competitions , or there are organisations which are hesitating to share their model to someone else just for inference but can do so if their privacy is totally ensured.  
+
+Thus , we need a way to encrypt both our data and model so that organisations can use other’s models to get their inference (predictions) because not everyone in the industry likes to create models 🙂   
+
+So, here comes a handy library “Pysyft” which helps to secure our data and models both , allowing us to perform encrypted computations like training and inference without ever disclosing anything about data and model using all the arithmetic and secret sharing that we earlier discussed under the hood.  
+
+(I have used colab for running all of the above code:)  
+
+## Results snap : 
+
+![](pics/result.gif)      
 
 
 
