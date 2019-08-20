@@ -43,4 +43,21 @@ _Now, what are the hyperparameters we are concerned with ?
 The model architectures used for other learning process will remain almost same although it’s a hit and trial process but there is yet another hyperparameter called ‘communication rounds’.
 Since this sending of model and getting received it back with updates from billion of users at a time is a communication channel rounds and hence , how many users are being sampled in each round influences how many rounds of communication is required until the convergence is reached._   
 
-![](pics/fed2.png)    
+![](pics/fed2.png)      
+
+Let’s talk about challenges faced during federated learning :
+* Data is distributed across millions of devices in a highly uneven fashion
+* Different users could be creating different non identical distributions
+* These devices have significantly higher-latency, lower-throughput connections and are only intermittently available for training.
+_Now you will be wondering that while training takes place my phone performance would be impacted.
+But surprisingly , nothing impacts the performance.
+To understand why read this extract which is taken from Google AI blog:
+“Careful scheduling ensures training happens only when the device is idle, plugged in, and on a free wireless connection, so there is no impact on the phone’s performance”_    
+
+Now , let’s see some of the changes introduced in normal federated learning to improve the privacy and move it to next level of enhancement :
+* Users are sampled randomly and not always equal , this ensures there is no bias.
+* Noise is added to the final output update of the model by applying globally differentially private algorithms.
+* There is new protocol for transfering data Secure Aggregation protocol which uses cryptographic techniques when decrypting the updates on the server and the server only does it when if 100s or 1000s of users have participated. No individual phone’s update can be inspected before averaging.
+
+## Basic overview of encrypted deep learning :   
+
