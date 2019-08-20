@@ -61,3 +61,4 @@ Now , let’s see some of the changes introduced in normal federated learning to
 
 ## Basic overview of encrypted deep learning :   
 
+![](pics/fed3.png)   
