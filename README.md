@@ -62,3 +62,50 @@ Now , let’s see some of the changes introduced in normal federated learning to
 ## Basic overview of encrypted deep learning :   
 
 ![](pics/fed3.png)   
+
+Okay before we move on , let’s set up our flow in which we will be going —
+* Brief introduction to modular arithmetic
+* Secret sharing technique
+* Encrypted deep learning with pysyft
+**Modular arithmetic** — why is it important here ?
+Let me ask you a simple question , suppose that a clock is showing time 2'O clock , and i ask what will be time after 15 hours , you might tell the correct answer as 5'O clock.     
+
+![](pics/fed4.png)    
+
+But ask a person who don’t know how to read a clock and he might answer 17'O clock , but hey 😕 we don’t have 17 in the clock !   
+So , have you observed that when you do add 15 + 2 you get 17 but the thing is that clocks work on mod 12 arithmetic also represented as “%”.   
+
+Remember classical arithmetic teaches us that if we add any number “a + b”
+Then we would obtain a result which will be greater than the numbers themselves but it is not the case with modular arithmetic.
+Let’s see this in the context of above example , when we take 17 % 12 or 17 mod 12 then we will obtain 5 which is also in the range under 12.   
+
+> So , one of the key takeaways is that whenever we take mod of some number like mod m it is guaranteed that our result will not overflow this chosen number m and all the overflowed numbers will wrap around this range.  
+
+Modular arithmetic helps in many recent technological advancements like Blockchain technology , Cryptographic techniques , Privacy preserving Deep learning , Machine learning etc.   
+
+**Secret sharing technique** :    
+Let’s see this in more pythonic way (you are going to learn fascinating things about how modular arithmetic helps in encrypting numbers allowing us to perform computations over them secretly 🤐):   
+
+![](pics/fed5.png)     
+
+We see that actually we add 5 and 3 instead of 15 and 13 , thus encrypting the actual numbers and similarly for subtraction.
+So , let’s say we want to perform computations over some numbers but keeping them secret.
+So , we take a number say 5 and then split this number using a simple formula shown below :   
+
+![](pics/fed6.png)    
+
+> Field is basically limit size or range within with we wanna wrap our numbers to stop overflowing. 
+Generally , we prefer it to be very large prime number.   
+
+ow we have encrypted “x” here.
+But wait , how to decrypt it ?
+There’s a simple elegant way of doing this in modular arithmetic -
+we sum up all the shares and take mod field to get our number back.  
+
+![](pics/fed7.png)      
+
+
+
+
+
+
