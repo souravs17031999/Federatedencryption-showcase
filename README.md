@@ -1,5 +1,5 @@
 # Project Objective :   
-## This project aims to achieve federated learning training of model and then testing on encrypted dataset and model using pytorch and pysyft.
+## This project aims to achieve [federated learning](https://ai.googleblog.com/2017/04/federated-learning-collaborative.html) training of model and then testing on [encrypted dataset and model](https://iamtrask.github.io/2017/03/17/safe-ai/) using [pytorch](https://pytorch.org/) and [pysyft](https://github.com/OpenMined/PySyft).
 
 ## Dataset : MNIST 
 > (Intent behind using the simple dataset is the main motive which is to combine privacy preserving techniques using pysyft)
