@@ -2,7 +2,7 @@
 ## This project aims to achieve federated learning training of model and then testing on encrypted dataset and model using pytorch and pysyft.
 
 ## Dataset : MNIST 
-> (Intent behind using simple dataset due to some constrainsts in implementing fully with CNN layers and optimizers , the motive is to combine privacy preserving techniques using pysyft)
+> (Intent behind using the simple dataset is the main motive which is to combine privacy preserving techniques using pysyft)
 
 ![](pics/google.gif)   
 
