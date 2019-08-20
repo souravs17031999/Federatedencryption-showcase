@@ -110,7 +110,17 @@ So, the thing is that there are various security and privacy issues when we trai
 
 Thus , we need a way to encrypt both our data and model so that organisations can use other’s models to get their inference (predictions) because not everyone in the industry likes to create models 🙂   
 
-So, here comes a handy library “Pysyft” which helps to secure our data and models both , allowing us to perform encrypted computations like training and inference without ever disclosing anything about data and model using all the arithmetic and secret sharing that we earlier discussed under the hood.  
+So, here comes a handy library “Pysyft” which helps to secure our data and models both , allowing us to perform encrypted computations like training and inference without ever disclosing anything about data and model using all the arithmetic and secret sharing that we earlier discussed under the hood.     
+
+Also , we create a few workers (named client, bob, and alice). 
+We define the crypto_provider who gives all the crypto primitives we may need.   
+
+The secret sharing that we discussed earlier is being used here to privately share the dataset across the workers we have created using pysyft’s inbuilt function **“fix_prec()”**.   
+
+Excerpt taken from openmined blog:   
+
+> “ SMPC uses crypto protocols which require to work on integers. We leverage here the PySyft tensor abstraction to convert PyTorch Float tensors into Fixed Precision Tensors using .fix_prec(). For example 0.123 with precision 2 does a rounding at the 2nd decimal digit so the number stored is the integer 12.”   
+
 
 (I have used colab for running all of the above code:)  
 
