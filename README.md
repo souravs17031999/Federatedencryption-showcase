@@ -70,7 +70,7 @@ Okay before we move on , let’s set up our flow in which we will be going —
 **Modular arithmetic** — why is it important here ?
 Let me ask you a simple question , suppose that a clock is showing time 2'O clock , and i ask what will be time after 15 hours , you might tell the correct answer as 5'O clock.     
 
-![](pics/fed4.png)    
+![](pics/fed4.jpeg)    
 
 But ask a person who don’t know how to read a clock and he might answer 17'O clock , but hey 😕 we don’t have 17 in the clock !   
 So , have you observed that when you do add 15 + 2 you get 17 but the thing is that clocks work on mod 12 arithmetic also represented as “%”.   
@@ -86,13 +86,13 @@ Modular arithmetic helps in many recent technological advancements like Blockcha
 **Secret sharing technique** :    
 Let’s see this in more pythonic way (you are going to learn fascinating things about how modular arithmetic helps in encrypting numbers allowing us to perform computations over them secretly 🤐):   
 
-![](pics/fed5.png)     
+![](pics/fed5.jpeg)     
 
 We see that actually we add 5 and 3 instead of 15 and 13 , thus encrypting the actual numbers and similarly for subtraction.
 So , let’s say we want to perform computations over some numbers but keeping them secret.
 So , we take a number say 5 and then split this number using a simple formula shown below :   
 
-![](pics/fed6.png)    
+![](pics/fed6.jpeg)    
 
 > Field is basically limit size or range within with we wanna wrap our numbers to stop overflowing. 
 Generally , we prefer it to be very large prime number.   
@@ -102,7 +102,7 @@ But wait , how to decrypt it ?
 There’s a simple elegant way of doing this in modular arithmetic -
 we sum up all the shares and take mod field to get our number back.  
 
-![](pics/fed7.png)      
+![](pics/fed7.jpeg)      
 
 **Encrypted deep learning with Pysyft** :   
 
